@@ -27,11 +27,16 @@ public class UseDice {
 		System.out.println("Welcome to the diceroll program");
 		System.out.println("How many times do you want to roll the dice?");
 
-		String n;
 
+		/*
+		-------------------------------------------------------------------------------
+		Get the user input and check if it's valid
+		-------------------------------------------------------------------------------
+		 */
+		String n;
 		while (true) {
 
-			n = keyboard.next();  // Read integer
+			n = keyboard.next();  // Read input
 			int bestod = 1;
 
 				for (int i = 0; n.length() > i; i++) {
@@ -50,7 +55,7 @@ public class UseDice {
 
 		int c = Integer.parseInt(n);
 
-		cup.rollMultiple(c);         // Roll the dice n times
+		cup.rollMultiple(c);         // Roll the dice c times
 		keyboard.close();            // Close the scanner
 
 	}
