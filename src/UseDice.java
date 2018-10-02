@@ -34,26 +34,35 @@ public class UseDice {
 		-------------------------------------------------------------------------------
 		 */
 		String n;
+		int c;
 		while (true) {
 
 			n = keyboard.next();  // Read input
-			int bestod = 1;
+			boolean bestod = true;
 
-				for (int i = 0; n.length() > i; i++) {
-					if (n.charAt(i) >= '0' && n.charAt(i) <= '9') {
-
-					}
-					else {
-						bestod = 0;
-					}
+			for (int i = 0; n.length() > i; i++) {
+				if (n.charAt(i) >= '0' && n.charAt(i) <= '9') {
+                    // Do nothing
 				}
+				else {
+						bestod = false;
+				}
+			}
 
-			if (bestod == 1) {
+			// Hvis inputtet ikke bested forrige test, så loop forfra.
+			if (!bestod) {
+				// Print en fejlmeddelse
+				System.out.println("Dit input skal være et positivt tal \nPrøv igen");
+				continue;		// Loop again
+			}
+
+			if (bestod) {
 				break;
 			}
 		}
 
-		int c = Integer.parseInt(n);
+		// Parse the input to a int
+		c = Integer.parseInt(n);
 
 		cup.rollMultiple(c);         // Roll the dice c times
 		keyboard.close();            // Close the scanner
