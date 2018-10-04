@@ -29,6 +29,22 @@ public class Dice {
 	////////////////////////// Properties //////////////////////////
 	 */
 
+    /**
+     * Gets the amount of rolls this Dice has done in total
+     * @return int
+     */
+    public int getTotalRolls() {
+        return totalRolls;
+    }
+
+    /**
+     * Set the amount of rolls this Dice has done in total
+     * @param totalRolls
+     */
+    private void setTotalRolls(int totalRolls) {
+        this.totalRolls = totalRolls;
+    }
+
 	/*
 	////////////////////////// Public Methods //////////////////////////
 	 */
