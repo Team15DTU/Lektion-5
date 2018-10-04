@@ -12,15 +12,14 @@ public class DiceTest {
     public void roll() {
 
 
-
-        int Antal = 60000; //ber den slå 60000
-        for (int i=0; i<Antal; i++) { // kører en løkke hvor i er en counter
+        int antal = 60000; //ber den slå 60000
+        for (int i=0; i<antal; i++) { // kører en løkke hvor i er en counter
             int roll = Dtest.roll();
             assertTrue(roll<7 && roll>0); //de forhold osm skal til for at dne består
 
         }
         int[] rollArray = new int[6];
-        for (int i=0; i<Antal; i++){
+        for (int i=0; i<antal; i++){
             int roll = Dtest.roll();
             rollArray[roll-1]=rollArray[roll-1]+1;
         }
