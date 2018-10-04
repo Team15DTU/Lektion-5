@@ -14,7 +14,7 @@ public class DiceTest {
 
 
         int Antal = 60000; //ber den slå 60000
-        for (int i=0; i<Antal; i++) { // køre en løkke hvor i er en counter
+        for (int i=0; i<Antal; i++) { // kører en løkke hvor i er en counter
             int roll = Dtest.roll();
             assertTrue(roll<7 && roll>0); //de forhold osm skal til for at dne består
 

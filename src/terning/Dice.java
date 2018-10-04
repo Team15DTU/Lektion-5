@@ -39,14 +39,16 @@ public class Dice {
 	public int roll() {
 	    // Roll logic
 		float d1=(float)Math.random();     // 0-1
-		float d2=d1*119;                     // 0-5
+		float d2=d1*119;                   // 0-5
 		int d3=Math.round(d2);             // 0-5 integer
 		int d4 = d3/20;
+		int result = d4 + 1;               // 1-6
 
 		// Update statistic counter
+        increaseRollCount();
 
         // Return the random value + 1
-		return d4 + 1;                     // 1-6
+		return result;
 	}
 
 	/**
