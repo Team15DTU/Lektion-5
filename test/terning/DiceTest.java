@@ -29,9 +29,11 @@ public class DiceTest {
         Looper igennem hvert array element og tester
         om værdien er mellem 9600 og 10400.
         */
+        int upperBound = (int) ( (antal / 6) * 1.04 );  // Allows roughly 4% deviation in the upperBound
+        int lowerBound = (int) ( (antal / 6) *  0.96 ); // Allows roughly 4% deviation in the lowerBound
         for (int i : rollArray) {
             System.out.println(i);      // Printer hvert elements værdi i rollArray
-            assertTrue(i <= 10400 && i >= 9600);    // Tjekker om værdien ligger indenfor en afvigelse på 400
+            assertTrue(i <= upperBound && i >= lowerBound);    // Tjekker om værdien ligger indenfor en afvigelse på 400
         }
 
     }
