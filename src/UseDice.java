@@ -22,12 +22,35 @@ import java.util.Scanner;
 public class UseDice {
 
 	public static void main(String[] args) {
+
+
+		///////////////////////////////////////////////////////////////////////////////
+		/*
+		-------------------------------------------------------------------------------
+		Create Dice object and Scanner object
+		-------------------------------------------------------------------------------
+		 */
 		Dice cup = new Dice();   // Make an instance of Dice
 		Scanner keyboard=new Scanner(System.in);   // Make an instance of keyboard Scanner
+
+		///////////////////////////////////////////////////////////////////////////////
+
+
+
+		///////////////////////////////////////////////////////////////////////////////
+		/*
+		-------------------------------------------------------------------------------
+		Print welcome message and prompt the user for the input
+		-------------------------------------------------------------------------------
+		 */
 		System.out.println("Welcome to the diceroll program");
 		System.out.println("How many times do you want to roll the dice?");
 
+		///////////////////////////////////////////////////////////////////////////////
 
+
+
+		///////////////////////////////////////////////////////////////////////////////
 		/*
 		-------------------------------------------------------------------------------
 		Get the user input and check if it's valid
@@ -57,15 +80,21 @@ public class UseDice {
 			}
 
 			if (bestod) {
-				break;
+				break;			// Gå ud af while loop
 			}
 		}
+		///////////////////////////////////////////////////////////////////////////////
 
+
+
+		///////////////////////////////////////////////////////////////////////////////
 		// Parse the input to a int
 		c = Integer.parseInt(n);
 
 		cup.rollMultiple(c);         // Roll the dice c times
 		keyboard.close();            // Close the scanner
+
+		///////////////////////////////////////////////////////////////////////////////
 
 	}
 }
